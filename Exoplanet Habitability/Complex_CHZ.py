@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jul 20 18:59:29 2022
-
 @author: harshambardekar
 """
 
@@ -57,7 +55,7 @@ df=df.loc[pd.notna(df['st_lum'])]
 df.reset_index(drop=True,inplace = True)
 
 # Creating a new column for absolute magnitude, based on the relation
-# between absolute magnitude and luminosity (see Wikipedia page)
+# between absolute magnitude and luminosity
 
 df['st_abs_mag'] = 4.83 + (-2.5*np.log10(df['st_lum']))
 
@@ -88,7 +86,6 @@ for i in range(0,len(df)):
 # Creating a new column for BOLOMETRIC luminosity, based on BOLOMETRIC Magnitude
 # (This is different from st_lum and st_abs_mag)
 # The bolometric luminosity must be used for the CHZ calculations
-# Once again, this formula can be found on Wikipedia
 
 df['bol_lum'] = 10**((df['bol_mag']-4.74)/-2.5)
 
@@ -174,20 +171,7 @@ for i in range(0,len(df)):
     
     else:
         df['Habitable'][i] = 'CND'
+
+print(planets,len(planets))
         
 df.to_csv('dataset_with_habitability.csv')
-
-random_df = df.loc[df['Habitable']=='Yes']
-random_df.reset_index(drop=True,inplace=True)
-random_df.to_csv('habitable_data.csv')
-
-with open('yes_habitable.csv', 'w', newline='') as csvfile:
-    fieldnames = ['number', 'pl_name']
-    planet_count = 0
-
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-    writer.writeheader()
-
-    for planet in planets:
-        planet_count += 1
-        writer.writerow({'number': planet_count, 'pl_name': planet})
