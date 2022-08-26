@@ -1,8 +1,8 @@
-number,pl_name,,Total unique exoplanets: 5045
-1,BD-06 1339 c,,Number habitable: 55
-2,HD 13908 c,,Number not habitable: 880
-3,Kepler-16 b,,Number CND: 4110
-4,Kapteyn c,,Number without luminosity (part of CND): 681
+number,pl_name,
+1,BD-06 1339 c,
+2,HD 13908 c,
+3,Kepler-16 b,
+4,Kapteyn c,
 5,HD 43197 b,,
 6,HD 564 b,,
 7,HD 10180 g,,
