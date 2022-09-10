@@ -30,7 +30,7 @@ df = df.sort_values(by=['rowupdate','releasedate'], ascending=True)
 
 df = df.drop_duplicates(subset=['pl_name'],keep='last')
 
-df.reset_index(drop = True,inplace=T rue)
+df.reset_index(drop = True,inplace=True)
 
 # Total number of unique exoplanets
 
