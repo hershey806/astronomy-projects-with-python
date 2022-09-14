@@ -1,4 +1,4 @@
-### Add brief research paper ###
+### Add brief research paper, add sources ###
 
 In this project, I analyzed a large database of exoplanets to determine what characteristics of an exoplanet favor habitability. To do this, I calculated each exoplanet's host star’s bolometric luminosity to determine the inner and outer bounds of its Circumstellar Habitable Zone (CHZ) and see if the exoplanet was within it. If it was, I deemed the exoplanet to be habitable. I then analyzed several key attributes of the habitable exoplanets visually using histograms, which can be seen in the figures directory. 
 
