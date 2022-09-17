@@ -12,6 +12,13 @@ You can find more details about my methods and code in ***Lunar_Craters.ipynb***
 
 ## Data and Figures
 
+***Lunar_Craters_Data.pdf*** contains tables that show my estimates of the widths and depths of several craters. The actual widths and depths of the craters are also shown for comparison. Overall, my estimations were fairly accurate; none of my estimates differed significantly from the actual values. 
+
+***Moon.jpg*** is the image of the Moon I captured and used as a baseline for the project.
+
+***Moon_Annotated.png*** is an image in which I labeled several craters on the Moon that I used for the project.
+
+## Conclusion and Significance
 
 
 
