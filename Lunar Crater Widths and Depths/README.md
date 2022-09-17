@@ -16,7 +16,7 @@ You can find more details about my methods and code in ***Lunar_Craters.ipynb***
 
 ***Moon.jpg*** is the image of the Moon I captured and used as a baseline for the project.
 
-***Moon_Annotated.png*** is an image in which I labeled several craters on the Moon that I used for the project.
+***Moon_Annotated.png*** is an image in which I labeled some of the lunar craters that I used for the project, along with some of the lunar maria.
 
 ## Conclusion and Significance
 
