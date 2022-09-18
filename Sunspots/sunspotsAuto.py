@@ -17,21 +17,21 @@ from astropy.utils.exceptions import AstropyWarning
 import warnings
 warnings.simplefilter('ignore', category=AstropyWarning)
 
-# Search the database
+# Searches the database
 results = Fido.search(a.Time('2015/05/05 12:00', '2015/05/11 12:00'),a.Instrument('HMI'),a.vso.Sample(0.5*u.day),a.vso.Physobs("intensity"))
 # print(results)
 
-# Get the results
+# Gets the results
 files = Fido.fetch(results, path="./images/")
 files = sorted(files)
 # print(files)
 
-# Save the names of files we downloaded or load them
+# Saves the names of files downloaded or loads them
 files = np.asarray(files)
 np.save('./data/files.npy', files)
 # files = np.load('./data/files.npy')
 
-# Plot the first image
+# Plots the first image
 smap = sunpy.map.Map(files[0])
 smap = smap.resample((1024, 1024) * u.pix)
 
@@ -41,7 +41,7 @@ ax.set_axis_off()
 smapRot = smap.rotate(order=3)
 smapRot.plot(axes=ax, annotate=False)
 
-# Animation of all images
+# Creates an animation of all images
 fig2 = plt.figure(10)
 mapsequence = sunpy.map.Map('./images/*.fits', sequence=True) 
 def sunspot_anim(i):
@@ -55,15 +55,15 @@ anim = animation.FuncAnimation(fig2, sunspot_anim, frames=len(files), interval=5
 anim.save('sunspots_Video.mov', writer='imagemagick', fps=0.5, dpi=800)
 # plt.show()
 
-# Find where the sunspots are using stara.py
+# Finds out where the sunspots are using stara.py
 # returns True for all x,y positions on the image where there is a snunspot
-# ie there will be more than one point for one sunspot
+# i.e. there will be more than one point for one sunspot
 spotBool = stara(smap, limb_filter=5 * u.percent)
 spots = np.where(spotBool)
-# We could plot these now or wait and plot them with which cluster (sunspot) they are in
+# Could plot these now or wait and plot them with the cluster (sunspot) they are in
 # ax.scatter(spots[1],spots[0],c='yellow',alpha=0.01)
 
-# Use scikit-learn to identify sunpots
+# Uses scikit-learn to identify sunpots
 from sklearn.cluster import DBSCAN
 from sklearn.preprocessing import StandardScaler
 
@@ -77,7 +77,7 @@ print('Estimated number of sunspots: %d' % n_clusters_)
 print('Estimated number of noise points: %d' % n_noise_)
 
 y_pred = clust.labels_.astype(np.int)
-# Colours for up to 9 clusters - black for noise
+# Colors for up to 9 clusters - black for noise
 colors = np.array(['#377eb8','#ff7f00','#4daf4a','#f781bf','#a65628','#984ea3','#999999','#e41a1c','#dede00'])
 colors = np.append(colors, ["#000000"])
 spots2DRot = 1024 - spots2D
@@ -87,7 +87,7 @@ ax.scatter(spots2DRot[:,1], spots2DRot[:,0], s=10, color=colors[y_pred], alpha=0
 
 def calc_cluster_centre(spots2D,y_pred):
     '''
-    Calculates the cluster centre.
+    Calculates the cluster center.
     Requires the sunspot points from stara and the cluster id for each point from sklearn
     '''
     clusterPoints = []
@@ -100,8 +100,8 @@ def calc_cluster_centre(spots2D,y_pred):
         clusterPoints.append([X,Y])
     return np.array(clusterPoints)
 
-# Calculates the centre of each cluster
-# does not know how to remove outliers etc ie very basic
+# Calculates the center of each cluster
+# it does not know how to remove outliers, so it's very basic
 clusterPoints = calc_cluster_centre(spots2D, y_pred)
 clusterPointsRot = 1024 - clusterPoints
 
@@ -135,13 +135,13 @@ def id_sunspots(files, v=False):
     '''
     Function to ID sunspots in a series of fits files
     These should be HMI continuum fits
-    Will create a visulaisation of the sunspots if v is given
+    Creates a visualization of the sunspots if v is given
     v is a string which is the gif filename
     '''
     printT('Function id_sunspots starting')
     ids = {}
     noSunspots = []
-    # Mapsequence seems to need a list
+    # Mapsequence needs a list
     mapsequence = sunpy.map.Map(files.tolist(), sequence=True) 
     printT('Map Sequence Created')
     if v!=False:
@@ -211,7 +211,7 @@ def id_sunspots(files, v=False):
 def track_sunspots(files, files_noSunspots, sunspot_ids, toldx, toldy, link, longest, resCut):
     '''
     Function to track movement of sunspot clusters from id_sunspots
-    Takes
+    Takes:
     files - array of fits filenames/paths
     files_noSunspots - array of fits filenames/paths which have no identified sunspots
     sunspots_ids - the cluster centres for each file (dictionary)
@@ -225,13 +225,13 @@ def track_sunspots(files, files_noSunspots, sunspot_ids, toldx, toldy, link, lon
     tracks = []
     newTracks = []
     printT('Creating initial track points')
-    # Get the initial tracks from the first file
+    # Gets the initial tracks from the first file
     for i in sunspot_ids[files[0]]:
         tracks.append(np.reshape(i, (-1, 2)))
     reset = False
     start = 0
     printT('Number of starting tracks = {}'.format(len(tracks)))
-    # Loop over all other files
+    # Loops through all other files
     for t in range(1, len(files)):
         printT('Searching timestep {}/{}'.format(t,len(files)-1))
         # If the last file had sunspots do this
@@ -245,8 +245,8 @@ def track_sunspots(files, files_noSunspots, sunspot_ids, toldx, toldy, link, lon
                     for j in thisIDS:
                         # What if this point starts a new track later
                         newTracks.append(np.reshape(j, (-1, 2)))
-                        # Check whether we get a link using positional cuts
-                        # If we do add it to newTracks (if less than len 4 do this without polyfit)
+                        # Checks whether we get a link using positional cuts
+                        # If we do, adds it to newTracks (if less than len 4 does this without polyfit)
                         # This is because polyfit might be poorly conditioned for less than 4 points
                         if (abs(j[1] - i[-1,-1]) < toldx) and (0 < abs(j[0] - i[-1,0]) < toldy):
                             testTrack = np.row_stack((i, j))
@@ -258,7 +258,7 @@ def track_sunspots(files, files_noSunspots, sunspot_ids, toldx, toldy, link, lon
                                 if res <= resCut:
                                     newTracks.append(testTrack)
                                     linked += 1
-                    # If no links were found append to finalTracks
+                    # If no links were found, appends to finalTracks
                     # Unless first few iterations where it won't be make sure it has linked something
                     l  = len(i)
                     if linked==0:
@@ -266,7 +266,7 @@ def track_sunspots(files, files_noSunspots, sunspot_ids, toldx, toldy, link, lon
                             finalTracks.append(i)
                         elif l > (t-start):
                             newTracks.append(i)
-                # Make sure tracks are greater than t or link in length
+                # Makes sure tracks are greater than t or link in length
                 print('Cleaning up {} tracks'.format(len(newTracks)))
                 tracks = []
                 for track in newTracks:
@@ -313,14 +313,14 @@ def track_sunspots(files, files_noSunspots, sunspot_ids, toldx, toldy, link, lon
 
 sunspot_ids, files_noSunspots = id_sunspots(files, v=True)
 
-# Save the data
+# Saves the data
 sunspot_ids_file = open('./data/sunspot_ids.pkl', 'wb')
 pickle.dump(sunspot_ids, sunspot_ids_file)
 sunspot_ids_file.close()
 files_noSunspots = np.asarray(files_noSunspots)
 np.save('./data/files_noSunspots.npy', files_noSunspots)
 
-# # Load the data if we have saved it from a previous run
+# # Loads the data if we have saved it from a previous run
 # # this lets us skip the time intensive scikit-learn step
 # files_noSunspots = np.load('./data/files_noSunspots.npy')
 # sunspot_ids_file = open('./data/sunspot_ids.pkl', 'rb')
@@ -329,16 +329,16 @@ np.save('./data/files_noSunspots.npy', files_noSunspots)
 
 toldx, toldy, link, longest, resCut = 80, 50, 5, 36, 5
 
-# Link the cluster centres into sunspot tracks
+# Links the cluster centers into sunspot tracks
 tracks = track_sunspots(files, files_noSunspots, sunspot_ids, toldx, toldy, link, longest, resCut)
 print('Number of tracks found = {}'.format(len(tracks)))
 tracks = np.asarray(tracks)
-# Save the data or load it
+# Saves the data or loads it
 unique_track_filename = './data/tracks_{}_{}_{}_{}_{}.npy'.format(toldx, toldy, link, longest, resCut)
 np.save(unique_track_filename, tracks)
 # tracks = np.load(unique_track_filename, allow_pickle=True)
 
-# Calculate the time period and latitude for each track
+# Calculates the time period and latitude for each track
 periods = []
 latitudes = []
 residuals = []
@@ -366,7 +366,7 @@ convert = 360/365.25
 deg_per_day = [360/t + convert for t in periods]
 periods = [360/dpd for dpd in deg_per_day]
 
-# Final cut remove extreme time periods
+# Final cut removes extreme time periods
 periodsCut = []
 latitudesCut = []
 residualsCut = []
@@ -381,10 +381,10 @@ residualsCut = np.asarray(residualsCut)
 
 print('\nFinal number of tracks plotted = {}'.format(len(periodsCut)))
 
-# Plot the latitude vs period
+# Plots the latitude vs period
 fig = plt.figure(4)
 ax = fig.add_subplot()
-# Color the points based on the residuals
+# Colors the points based on the residuals
 colors = residualsCut.flatten()/max(residualsCut)
 scatter = ax.scatter(periodsCut, latitudesCut, c=colors, cmap='viridis', alpha=0.75, ec='None')
 ax.set_ylim(-90, 90)
@@ -404,7 +404,7 @@ ax.text(0.3, 0.99, 'max Residual = {:.2f}'.format(max(residualsCut)[0]),
         transform=ax.transAxes,
         color='k', fontsize=10)
 
-# Plot the theoretical rotation curve using SunPy
+# Plots the theoretical rotation curve using SunPy
 from sunpy.physics.differential_rotation import diff_rot
 
 latitudesTheory = np.arange(-90, 90, 1) * u.deg
