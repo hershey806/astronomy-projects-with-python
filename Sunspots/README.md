@@ -1,3 +1,1 @@
-Rename Figures folder to figures
-
-Add info about project
+# Exploring the Theory Behind Sunspots and Utilizing Them to Determine the Rotation Period of the Sun
