@@ -20,7 +20,7 @@ You can find more details about my methods and code in ***Lunar_Craters.ipynb***
 
 ## Conclusion and Significance
 
-This project was important to me because it showed me that I could do big things with amateur astronomy equipment; I only needed a smartphone camera and a basic telescope to measure the widths and depths of lunar craters over 384,000 km away!
+This project was important to me because it showed me that I could do big things with amateur astronomy equipment; I only needed a smartphone camera and a basic telescope to measure the widths and depths of lunar craters over 300,000 km away!
 
 This project was not too difficult in terms of coding; the harder part was formulating a plan and gathering information to estimate the widths and depths of the craters. However, I did learn how to use Skyfield, a Python package for calculating positions of objects relative to Earth. I will likely be using Skyfield in the future, so this project was helpful for learning the basics of Skyfield. 
 
