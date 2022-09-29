@@ -6,7 +6,7 @@ In this project, I explored one of the Sun's most recognizable features: sunspot
 
 My project consisted of three main parts:
 
-1. I tracked the x and y coordinates of several sunspots to determine how far they moved in a period of time. I used this information to calculate the rotational period of the Sun at various latitudes. 
+1. I tracked the x and y coordinates of several sunspots and created a graph of their motion over time. I used this graph to calculate the rotational period of the Sun at various latitudes. For more details about my code and methodology, see the ***sunspots.ipynb*** notebook. 
 
 2. I explored the theory behind the movement of sunspots. Specifically, 
 
