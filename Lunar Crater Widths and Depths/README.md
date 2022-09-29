@@ -8,7 +8,7 @@ To calculate the width of craters, I measured the widths in pixels and then used
 
 To calculate the depth of craters, I specifically analyzed craters near the Moon's terminator because they had a visible shadow. I measured the width of the shadow of each crater in pixels and kilometers, and then used trigonometry to relate the width of the shadow and crater to the depth of the crater. 
 
-You can find more details about my methods and code in ***Lunar_Craters.ipynb***. 
+You can find more details about my methods and code in the ***Lunar_Craters.ipynb*** notebook. 
 
 ## Data and Figures
 
