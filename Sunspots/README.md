@@ -8,7 +8,7 @@ My project consisted of three main parts:
 
 1. I tracked the x and y coordinates of several sunspots and created a graph of their motion over time. I used this graph to calculate the rotational period of the Sun at various latitudes. You can find more details about my code and methodology in the ***sunspots.ipynb*** notebook. 
 
-2. I explored the theory and mathematics behind the movement of sunspots. Specifically, I used power functions to approximate the movement of sunspots. You can find more details about my code and methodology in the ***theorySunspots1.ipynb*** and ***theorySunspots2.ipynb*** notebooks. 
+2. I explored the theory and mathematics behind the movement of sunspots. Specifically, I determined which power functions best approximate the movement of sunspots. This data was used in the ***sunspotsAuto.py*** script to determine whether or not to accept a sunspot track. You can find more details about my code and methodology in the ***theorySunspots1.ipynb*** and ***theorySunspots2.ipynb*** notebooks. 
 
 3. I created a machine learning algorithm to automatically detect and track sunspots. You can find more details about my code and methodology in the ***sunspotsAuto.py*** file (which uses code from the ***stara.py*** file). 
 
