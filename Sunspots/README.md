@@ -10,7 +10,7 @@ My project consisted of three main parts:
 
 2. I explored the theory behind the movement of sunspots. Specifically, 
 
-3. I created a machine learning algorithm to automatically detect and track sunspots. 
+3. I created a machine learning algorithm to automatically detect and track sunspots. You can find more details about my code and methodology in the ***sunspotsAuto.py*** file. 
 
 ## Data and Figures
 
