@@ -16,8 +16,10 @@ My project consisted of three main parts:
 
 The main source of data I used for this project was images of the Sun captured by the HMI instrument on SDO. I retrieved these images using the Fido object from in sunpy.net (https://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html#fido-guide). You can see the FITS files of these images in the ***Sun Images*** directory. 
 
+***SunspotsData.pdf*** contains a table showing the rotation period of the Sun at various latitudes that I calculated. The values come from the calculations performed in ***sunspots.ipynb***. 
+
 The ***data*** directory contains the data files used in the machine learning part of my project (***sunspotsAuto.py***). 
 
-
+Finally, the ***figures*** directory contains images and GIFS created from the code in the notebooks. 
 
 ## Conclusion and Significance
