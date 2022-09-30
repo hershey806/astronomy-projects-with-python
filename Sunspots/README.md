@@ -14,6 +14,8 @@ My project consisted of three main parts:
 
 ## Data and Figures
 
-The main source of data I used for this project was images of the Sun captured by the HMI instrument on SDO. I retrieved these images using the Fido object from in sunpy.net (https://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html#fido-guide). 
+The main source of data I used for this project was images of the Sun captured by the HMI instrument on SDO. I retrieved these images using the Fido object from in sunpy.net (https://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html#fido-guide). You can see the FITS files of these images in the ***Sun Images*** directory. 
+
+
 
 ## Conclusion and Significance
