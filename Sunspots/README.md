@@ -23,3 +23,7 @@ The ***data*** directory contains the data files used in the machine learning pa
 Finally, the ***figures*** directory contains images and GIFS created from the code in the notebooks. 
 
 ## Conclusion and Significance
+
+The main purpose of this project was to estimate the Sun's rotation period at various latitudes. I was able to successfully accomplish this; you can see the results of my code in ***SunspotsData.pdf***. This part of the project was not coding-intensive, but rather more mathematical in nature. That being said, I became with more proficient with astronomy packages such as SunPy while working on this project. I also learned a lot about the mathematical theory behind the motion of sunspots. 
+
+The hardest part of this project was the automation of sunspot detection (***sunspotsAuto.py***). Prior to this project, I was not very knowledgeable in machine learning, but I was really interested in the idea of being able to automatically identify sunspots. I thus looked into object detection with Python, and eventually decided to use scikit-learn DBS clustering. You can see the results of my algorithm in the ***sunspotsTracked*** gif in the ***figures*** directory. My algorithim was pretty accurate, but occasionally, a sunspot appeared in one image and disappeared in the next, so perhaps a different clustering algorithim would be better. 
