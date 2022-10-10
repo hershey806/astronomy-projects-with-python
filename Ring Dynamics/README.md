@@ -14,7 +14,7 @@ This project consisted of 3 main parts:
 
 I didn't use a specific source of data for the main part of this project; the rebound package had everything I needed to set up the simulation. I was able to "snapshot" the simulation at various stages, after which I combined the images to create a gif: ***roche_Limit.gif***, which you can find in the ***figures*** directory. 
 
-FINISH
+For the resonances part of this project, I used an existing dataset in the form of a csv. You can find the link to the data in the References section in the ***ringDynamics.ipynb*** notebook. Additionally, I used several labeled images of Saturn's rings, which you can find in the ***figures*** directory, to determine the features at several resonances. 
 
 ## Conclusion and Significance ##
 
