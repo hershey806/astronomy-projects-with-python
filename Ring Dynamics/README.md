@@ -18,5 +18,6 @@ For the resonances part of this project, I used an existing dataset in the form 
 
 ## Conclusion and Significance ##
 
-The main purpose of this project was to visualize what happens to a moon as it approaches the Roche limit of its parent body. I was able to sucessfully do this using the rebound package; you can see the visualization in the ***rocheLimit.gif*** file in the ***figures*** directory. This project was fairly intensive in terms of both coding and theory; I had to learn how to use a package I was completely unfamiliar with. However, it was definitely worth it because I am happy with how the GIF turned out
+The main purpose of this project was to visualize what happens to a moon as it approaches the Roche limit of its parent body. I was able to sucessfully do this using the rebound package; you can see the visualization in the ***rocheLimit.gif*** file in the ***figures*** directory. This project was fairly intensive in terms of both coding and theory; I had to learn how to use a package I was completely unfamiliar with. However, it was definitely worth it because I am happy with how the GIF turned out. 
 
+The other parts of this project (resonances and the effects of moons on rings) were not very challenging, but still fun to explore. I was able to create a table showing the ratios between the orbital periods of pairs of Saturn's moons, and then use this table to identify locations of resonances.  
