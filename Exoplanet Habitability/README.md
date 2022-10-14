@@ -1,13 +1,24 @@
-### Add brief research paper, add sources, add more info about each file in project ###
-
-### add link to dataset, note that it might not yield same results bc it gets updated, explain that its too big to put in github ###
+### Add brief research paper, add sources, add info abt figures ###
 
 ## Introduction
 
-In this project, I analyzed a large database of exoplanets to determine what characteristics of an exoplanet favor habitability. To do this, I calculated each exoplanets' host star’s bolometric luminosity to determine the inner and outer bounds of its Circumstellar Habitable Zone (CHZ) and see if the exoplanet was within it. If it was, I deemed the exoplanet to be habitable. I then analyzed several key attributes of the habitable exoplanets visually using histograms, which can be seen in the figures directory. 
+In this project, I analyzed a large database of exoplanets to determine what characteristics of an exoplanet favor habitability. To do this, I first calculated each exoplanet's host star’s bolometric luminosity. I then used the bolometric luminosity to determine the inner and outer bounds of each host star's Circumstellar Habitable Zone (CHZ). Then, I checked each exoplanet to see if its average orbiting distance was within the CHZ of its host star. If it was, I deemed the exoplanet to be habitable. I then analyzed several key attributes of the habitable exoplanets visually using histograms. Using the histograms, I was able to either support or reject my initial hypothesis about the characteristics of habitable exoplanets. 
+
+To learn more about my methodology and the theoretical aspect of project, please see ***ADD TITLE OF PDF HERE***. 
+
+For more information about my code, I highly recommend looking at the ***CHZ_code.py*** file. I added comments to explain each step of the process.
+
+For more information about how I created the histograms, please see the ***Charts.ipynb*** notebook. 
 
 ## Data
 
+The main source of data for this research project was the NASA Exoplanet Archive: ***link***. I was not able to put the dataset in Github because it was too large. However, if you do download the dataset and run my code on it, please note that you may get slightly different results because the dataset is regularly updated, and the results I obtained were from the July 2022 version of the dataset. 
+
+***full_dataset_with_habitability.csv*** contains the entire dataset with the columns added from my code (the last 6 columns: Standard Absolute Magnitude, Bolometric Magnitude, Bolometric Luminosity, Inner CHZ Bound, Outer CHZ Bound, and Habitability). 
+
+***habitable_exoplanets.csv*** contains solely the names of the 55 exoplanets deemed to be habitable by my code. 
+
+***habitable_exoplanets_data.csv*** shows the dataset with all the columns but only for the 55 exoplanets deemed to be habitable. This file was the file I used to generate the histograms in ***Charts.ipynb***. 
 
 ## Results
 
