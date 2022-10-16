@@ -1,4 +1,4 @@
-### Add brief research paper, add sources, add info abt figures ###
+### Add brief research paper, add sources ###
 
 ## Introduction
 
