@@ -1,18 +1,22 @@
 ### Add brief research paper, add sources ###
 
+## Important Note ##
+
+I worked on this project as part of the Aspiring Scholars Directed Research Program (ASDRP). Some of the code and methodology presented here is different than what I use at ASDRP due to IP reasons. 
+
 ## Introduction
 
 In this project, I analyzed a large database of exoplanets to determine what characteristics of an exoplanet favor habitability. To do this, I first calculated each exoplanet's host star’s bolometric luminosity. I then used the bolometric luminosity to determine the inner and outer bounds of each host star's Circumstellar Habitable Zone (CHZ). Then, I checked each exoplanet to see if its average orbiting distance was within the CHZ of its host star. If it was, I deemed the exoplanet to be habitable. I then analyzed several key attributes of the habitable exoplanets visually using histograms. Using the histograms, I was able to either support or reject my initial hypothesis about the characteristics of habitable exoplanets. 
 
 To learn more about my methodology and the theoretical aspect of project, please see ***ADD TITLE OF PDF HERE***. 
 
-For more information about my code, I highly recommend looking at the ***CHZ_code.py*** file. I added comments to explain each step of the process.
+For more information about my code, please see the ***CHZ_code.py*** file. I added comments to explain each step of the process.
 
 For more information about how I created the histograms, please see the ***Charts.ipynb*** notebook. 
 
 ## Data
 
-The main source of data for this research project was the NASA Exoplanet Archive: ***link***. I was not able to put the dataset in Github because it was too large. However, if you do download the dataset and run my code on it, please note that you may get slightly different results because the dataset is regularly updated, and the results I obtained were from the July 2022 version of the dataset. 
+The main source of data for this research project was the NASA Exoplanet Archive: ***https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS***. I was not able to put the dataset in Github because it was too large. However, if you do download the dataset and run my code on it, please note that you may get slightly different results because the dataset is regularly updated, and the results I obtained were from the July 2022 version of the dataset. 
 
 ***full_dataset_with_habitability.csv*** contains the entire dataset with the columns added from my code (the last 6 columns: Standard Absolute Magnitude, Bolometric Magnitude, Bolometric Luminosity, Inner CHZ Bound, Outer CHZ Bound, and Habitability). 
 
@@ -34,3 +38,10 @@ Additionally, in the ***figures*** directory, you can see the figures generated 
 
 ## Sources
 
+NASA Exoplanet Archive: https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS
+
+“Brightness, Magnitudes, and Luminosity: A Tutorial (Prof. Harriet Dinerstein, Ast 307, 4/21/14)”: https://www.as.utexas.edu/astronomy/education/fall15/wheeler/secure/MagnitudeTutorial.pdf
+
+Principles of Planetary Biology Chapter 5: Astronomical Circumstances: https://www.planetarybiology.com/planetarybio_text/07_astronomical_circumstances.pdf
+
+"Transformations from Theoretical Hertzsprung-Russell Diagrams to Color-Magnitude Diagrams: Effective Temperatures, B-V Colors, and Bolometric Corrections": https://ui.adsabs.harvard.edu/abs/1996ApJ...469..355F/abstract
