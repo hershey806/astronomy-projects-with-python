@@ -2,7 +2,7 @@
 
 ## Important Note ##
 
-I worked on this project as part of the Aspiring Scholars Directed Research Program (ASDRP). Some of the code and methodology presented here is different than what I use at ASDRP due to IP reasons. 
+I worked on this research project as part of the Aspiring Scholars Directed Research Program (ASDRP). Some of the code and methodology presented here is different than what I use at ASDRP due to IP reasons. 
 
 ## Introduction
 
