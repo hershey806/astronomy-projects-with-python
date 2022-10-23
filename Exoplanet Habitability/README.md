@@ -8,7 +8,7 @@ I worked on this research project as part of the Aspiring Scholars Directed Rese
 
 In this project, I analyzed a large database of exoplanets to determine what characteristics of an exoplanet favor habitability. To do this, I first calculated each exoplanet's host star’s bolometric luminosity. I then used the bolometric luminosity to determine the inner and outer bounds of each host star's Circumstellar Habitable Zone (CHZ). Then, I checked each exoplanet to see if its average orbiting distance was within the CHZ of its host star. If it was, I deemed the exoplanet to be habitable. I then analyzed several key attributes of the habitable exoplanets visually using histograms. Using the histograms, I was able to either support or reject my initial hypothesis about the characteristics of habitable exoplanets. 
 
-To learn more about my methodology and the theoretical aspect of project, please see ***ADD TITLE OF PDF HERE***. 
+To learn more about my methodology and the theoretical aspect of project, please read through the sources listed below; the most important formulas - those used to determine the CHZ - come from Tom Morris's book "The Principals of Planetary Biology."
 
 For more information about my code, please see the ***CHZ_code.py*** file. I added comments to explain each step of the process.
 
