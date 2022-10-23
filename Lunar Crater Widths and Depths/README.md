@@ -1,4 +1,4 @@
-# Using Amateur Astronomy To Esimate the Width and Depth of Lunar Craters
+# Using Amateur Astronomy To Estimate the Width and Depth of Lunar Craters
 
 ## Overview of Project
 
