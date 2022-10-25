@@ -1,5 +1,3 @@
-### ADD MORE IN FIGURES SECTION OF RESULTS ABOUT HOW THEY PROVE/DISPROVE HYPOTHESIS ###
-
 ## Important Note ##
 
 I worked on this research project as part of the Aspiring Scholars Directed Research Program (ASDRP). Some of the code and methodology presented here is different than what I use at ASDRP due to IP reasons. 
